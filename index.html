@@ -9,42 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <!-- ml5 -->
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <style>
-    html, body{
-      margin: 0;
-      padding: 0;
-      background-color: darkgray;
-      color: white;
-    }
-
-    .background{
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-        .centered{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-        }
-        hr{
-          border: 0;
-          clear: both;
-          display: block;
-          width: 75%;
-          background-color: red !important;
-          height: 1px;
-        }
-        #list li{
-          display: inline;
-          font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="myStyle.css" type="text/css">
   </head>
-
   <body>
     <div class="centered">
       <h1>Result</h1>
@@ -87,7 +53,7 @@
         "yes": "./images/yes.png",
         "no": "./images/no.png"
       };
-      
+
       console.log('ml5 version:', ml5.version);
       const options = { probabilityThreshold: 0.85 };
       const classifier = ml5.soundClassifier('SpeechCommands18w', options, modelReady);
